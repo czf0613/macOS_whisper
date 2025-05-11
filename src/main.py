@@ -55,7 +55,7 @@ if __name__ == "__main__":
     window.withdraw()
 
     video_file = filedialog.askopenfilename(
-        title="选择视频", filetypes=[("视频文件", "*.mp4 *.mov")]
+        parent=window, title="选择视频", filetypes=[("视频文件", "*.mp4 *.mov")]
     )
     if video_file == "":
         print("没有选择视频文件")
@@ -65,7 +65,7 @@ if __name__ == "__main__":
     speech_file = "work_cache/test.wav"
     subprocess.run(
         [
-            "res/ffmpeg",
+            "ffmpeg",
             "-y",
             "-i",
             video_file,

@@ -1,16 +1,19 @@
 #!/bin/bash
 set -e
 
-cd $(dirname "$0")
+echo "正在删除虚拟环境和依赖..."
+cd "$(dirname "$0")"
 
 # 删掉venv
-rm -rf bin/ || true
-rm -rf include/ || true
-rm -rf lib/ || true
-rm -rf share/ || true
-rm -f pyvenv.cfg || true
+rm -rvf bin/ || true
+rm -rvf include/ || true
+rm -rvf lib/ || true
+rm -rvf share/ || true
+rm -vf pyvenv.cfg || true
 
 # 删掉依赖
-rm -rf work_cache/ || true
-rm -f res/ffmpeg || true
-rm -rf whisper-large-v3-mlx/ || true
+rm -rvf work_cache/ || true
+rm -vf res/ffmpeg || true
+rm -rvf whisper-large-v3-mlx/ || true
+
+echo "删除完成！可以关闭终端"

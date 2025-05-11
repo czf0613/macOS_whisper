@@ -1,1 +1,1 @@
-mlx-whisper
+mlx-whisper==0.4.2
