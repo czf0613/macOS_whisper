@@ -1,0 +1,13 @@
+.DS_Store
+
+bin/
+include/
+share/
+lib/
+pyvenv.cfg
+
+__pycache__/
+work_cache/
+
+res/ffmpeg
+whisper-large-v3-mlx/
