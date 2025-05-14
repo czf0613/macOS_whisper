@@ -55,7 +55,7 @@ if __name__ == "__main__":
     window.withdraw()
 
     video_file = filedialog.askopenfilename(
-        parent=window, title="选择视频", filetypes=[("视频文件", "*.mp4 *.mov")]
+        title="选择视频", filetypes=[("视频文件", "*.mp4 *.mov")]
     )
     if video_file == "":
         print("没有选择视频文件")
